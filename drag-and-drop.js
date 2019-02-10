@@ -23,12 +23,7 @@
         //クラス名に .drag を追加。こうすることで以降の座標操作の対象を１カードだけに絞れる
         this.classList.add("drag");
 
-        //（スマホの）タッチイベントと（PCの）マウスのイベントの差異を吸収
-        if(e.type === "mousedown") {
-            var event = e;
-        } else {
-            var event = e.changedTouches[0];
-        }
+        var event = e;
 
         //要素内の相対座標を取得
         //pageX : イベント発生地点からドキュメント左端までのpx数を返す: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX
@@ -38,7 +33,6 @@
 
         //ムーブイベントにコールバック(この要素自体ではなく、document.bodyにつける。クリックしたまま動かすので）
         document.body.addEventListener("mousemove", mmove, false);
-        document.body.addEventListener("touchmove", mmove, false);
     }
 
     //(カードをクリック中に）マウスカーソルが動いたときに発火
@@ -46,13 +40,9 @@
 
         //ドラッグしている要素(drag属性を持っている)を取得して、いま掴んでいる要素のみを得る。こうしないと全部のカードが動く
         var drag = document.getElementsByClassName("drag")[0];
+        
+        var event = e;
 
-        //同様にマウスとタッチの差異を吸収
-        if(e.type === "mousemove") {
-            var event = e;
-        } else {
-            var event = e.changedTouches[0];
-        }
 
         //フリックしたときに画面を動かさないようにデフォルト動作を抑制
         e.preventDefault();
@@ -65,9 +55,6 @@
         drag.addEventListener("mouseup", mup, false);
         //マウスカーソルが画面外に消えたとき
         document.body.addEventListener("mouseleave", mup, false);
-        //以下スマホ用
-        drag.addEventListener("touchend", mup, false);
-        document.body.addEventListener("touchleave", mup, false);
 
     }
 
@@ -78,9 +65,6 @@
         //bodyからmousemove消去、.dragからmouseup消去(起点のmousedownは残る）
         document.body.removeEventListener("mousemove", mmove, false);
         drag.removeEventListener("mouseup", mup, false);
-      
-        document.body.removeEventListener("touchmove", mmove, false);
-        drag.removeEventListener("touchend", mup, false);
 
         //掴んでいることを示していたクラス名 .drag を消す
         drag.classList.remove("drag");
