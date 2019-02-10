@@ -1,0 +1,53 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+/**card共通**/
+.drag-and-drop {
+    cursor: move;/**移動可能(十字）のカーソルになる**/
+    width: 100px;
+    height: 100px;
+    /**位置指定**/
+    position: absolute;
+    z-index: 1000;
+    color:black;
+    font-size: 22px;
+    line-height: 100px;
+    text-align: center
+}
+
+/*赤カード*/
+#red-box {
+  top:0px;
+  left:0px;
+  background-color: red;
+}
+
+/*青カード*/
+#blue-box{
+  top:100px;
+  left:100px;
+  background-color: blue;
+}
+
+/*黄カード*/
+#yellow-box{
+  top:200px;
+  left:200px;
+  background-color: yellow;
+}
+
+
+/*3つ軸ごとに色かえる*/
+.drag {
+    font-size: 32px;/*マウスでつかんでる間だけ文字を大きく*/
+    z-index: 1001;
+}
