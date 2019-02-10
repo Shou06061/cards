@@ -10,12 +10,12 @@ h1 {
   color: #373fff;
 }
 
-/**card‹¤’Ê**/
+/**cardå…±é€š**/
 .drag-and-drop {
-    cursor: move;/**ˆÚ“®‰Â”\(\šj‚ÌƒJ[ƒ\ƒ‹‚É‚È‚é**/
+    cursor: move;/**ç§»å‹•å¯èƒ½(åå­—ï¼‰ã®ã‚«ãƒ¼ã‚½ãƒ«ã«ãªã‚‹**/
     width: 100px;
     height: 100px;
-    /**ˆÊ’uw’è**/
+    /**ä½ç½®æŒ‡å®š**/
     position: absolute;
     z-index: 1000;
     color:black;
@@ -24,21 +24,21 @@ h1 {
     text-align: center
 }
 
-/*ÔƒJ[ƒh*/
+/*èµ¤ã‚«ãƒ¼ãƒ‰*/
 #red-box {
   top:0px;
   left:0px;
   background-color: red;
 }
 
-/*ÂƒJ[ƒh*/
+/*é’ã‚«ãƒ¼ãƒ‰*/
 #blue-box{
   top:100px;
   left:100px;
   background-color: blue;
 }
 
-/*‰©ƒJ[ƒh*/
+/*é»„ã‚«ãƒ¼ãƒ‰*/
 #yellow-box{
   top:200px;
   left:200px;
@@ -46,8 +46,8 @@ h1 {
 }
 
 
-/*3‚Â²‚²‚Æ‚ÉF‚©‚¦‚é*/
+/*3ã¤è»¸ã”ã¨ã«è‰²ã‹ãˆã‚‹*/
 .drag {
-    font-size: 32px;/*ƒ}ƒEƒX‚Å‚Â‚©‚ñ‚Å‚éŠÔ‚¾‚¯•¶š‚ğ‘å‚«‚­*/
+    font-size: 32px;/*ãƒã‚¦ã‚¹ã§ã¤ã‹ã‚“ã§ã‚‹é–“ã ã‘æ–‡å­—ã‚’å¤§ãã*/
     z-index: 1001;
 }
